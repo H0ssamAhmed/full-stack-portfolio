@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@/components/ui/ThemeProvider'
 import React from 'react'
 
-const ArticlesLayout = ({
+export default function ArticlesLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
-}>) => {
+}>) {
     return (
         <body className="min-h-full flex flex-col">
             <ThemeProvider
@@ -20,4 +20,3 @@ const ArticlesLayout = ({
     )
 }
 
-export default ArticlesLayout

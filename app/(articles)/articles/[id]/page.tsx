@@ -1,9 +1,8 @@
 import React from 'react'
 
-const ArticlesView = () => {
+export default function ArticlesView() {
     return (
         <div>ArticlesView</div>
     )
 }
 
-export default ArticlesView
