@@ -3,21 +3,16 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ui/ThemeToggler";
 import Link from "next/link";
 import MainNavbar from "./(marketing)/_components/MainNavbar";
+import { getHomeService } from "@/lib/services/Home.service";
 
-const getHomeData = async () => {
-  const response = await fetch("/api/home");
-  const data = await response.json();
-  console.log(data);
-
-  return data;
-}
 
 
 export default async function Home() {
-  await getHomeData()
+  const { experiences, projects, skills, certificates } = await getHomeService()
 
 
   return (
+
     <main className=' flex items-center justify-center h-screen flex-col gap-4'>
       <MainNavbar />
       <ModeToggle />

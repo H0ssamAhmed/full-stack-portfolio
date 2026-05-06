@@ -1,9 +1,11 @@
 import Logo from '@/components/shared/Logo'
 import { Button } from '@/components/ui/button'
 import { ModeToggle } from '@/components/ui/ThemeToggler'
-import React from 'react'
+
 
 const MainNavbar = () => {
+
+
     return (
         <nav className=' bg-teal-300 w-full'>
             <div className=' mx-auto bg-orange-400   flex items-center justify-between'>

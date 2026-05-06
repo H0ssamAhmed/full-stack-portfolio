@@ -8,12 +8,6 @@ import Certificate from "../../../lib/models/Certificate.js";
 export async function GET() {
   try {
     await connectDB();
-    console.log({
-      Experience,
-      Project,
-      Skill,
-      Certificate,
-    });
     const [experiences, projects, skills, certificates] = await Promise.all([
       Experience.find({ isPublished: true }),
       Project.find({ featured: true, isPublished: true })
